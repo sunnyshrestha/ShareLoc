@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvTitle"
+        android:paddingTop="8dp"
+        android:gravity="left|center_vertical"
+        android:text="Old Baneswore"
+        android:paddingLeft="16dp"
+        android:textSize="16sp"
+        android:textColor="@color/title"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvDescription"
+        android:paddingBottom="8dp"
+        android:gravity="left|center_vertical"
+        android:text="You can find good momo here."
+        android:paddingLeft="16dp"
+        android:textColor="@color/body"
+        android:textStyle="italic"/>
+
+</LinearLayout>

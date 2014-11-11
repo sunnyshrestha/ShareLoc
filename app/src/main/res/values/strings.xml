@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ShareLoc</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="button_text">Tap to get location</string>
+    <string name="longitudehint">Waiting for longitude...</string>
+    <string name="latitudehint">Waiting for latitude...</string>
+    <string name="longitude">Longitude</string>
+    <string name="latitude">Latitude</string>
+    <string name="location_action">Location actions</string>
+    <string name="show_on_map">Show location on map</string>
+    <string name="attach_image">Attach image</string>
+    <string name="sms_location">Send location as SMS</string>
+    <string name="title_activity_sample">SampleActivity</string>
+    <string name="locationinfo">Your location co-ordinates</string>
+    <string name="locationnotfixed">Wait for location fix</string>
+    <string name="refresh">Refresh</string>
+    <string name="share">Share your location</string>
+    <string name="title_activity_main">Main</string>
+    <string name="button_sharecurrent">Share my current location</string>
+    <string name="button_view">View my saved locations</string>
+    <string name="cannot_get">GPS disabled</string>
+    <string name="alert_msg">This app uses GPS to pin-point your location. You need to enable GPS.</string>
+    <string name="alert_dialog_title">GPS is disabled</string>
+    <string name="enable">Enable</string>
+    <string name="cancel">Cancel</string>
+    <string name="progress_title">Getting co-ordinates</string>
+    <string name="progress_body">Move to an area with visible sky for a faster GPS fix.</string>
+    <string name="address">Street</string>
+    <string name="waitforaddress">Waiting for address...</string>
+    <string name="save">Save location to database</string>
+    <string name="title_activity_save_location_details">saveLocationDetails</string>
+    <string name="title_save">Enter details to save location</string>
+    <string name="place_name">Address</string>
+    <string name="description">Description</string>
+    <string name="hint_description">What\'s interesting here?</string>
+    <string name="save_button">Save</string>
+    <string name="discard">Discard</string>
+    <string name="title_dialog">Discard changes?</string>
+    <string name="dialog_body">Are you sure you want to discard any changes?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="street_address">Enter street address...</string>
+    <string name = "incomplete_info">You need to fill complete information before saving</string>
+    <string name = "success">Successfully saved to database</string>
+
+
+</resources>
