@@ -8,10 +8,6 @@ import android.view.ViewGroup;
 import android.widget.CursorAdapter;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
-import java.util.ArrayList;
-
 /**
  * Created by Sunny on 11/7/2014.
  * refer this http://www.mysamplecode.com/2012/07/android-listview-cursoradapter-sqlite.html added on 11/10/2014
@@ -59,4 +55,6 @@ public class CustomCursorAdapter extends CursorAdapter {
     public long getItemId(int position) {
         return position;
     }
+
+
 }

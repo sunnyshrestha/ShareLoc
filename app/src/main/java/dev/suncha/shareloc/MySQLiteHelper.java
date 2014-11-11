@@ -16,8 +16,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import java.util.ArrayList;
-import java.util.Currency;
-import java.util.HashMap;
 
 public class MySQLiteHelper extends SQLiteOpenHelper {
 
@@ -30,10 +28,6 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
     public static final String LATITUDE= "latitude";
 
     //private HashMap hp;
-
-    private static final String DATABASE_NAME="locations.db";
-    private static final int DATABASE_VERSION=1;
-
     private static final String DATABASE_CREATE = "CREATE TABLE "
             + TABLE_LOCATIONS + "("+COLUMN_ID
             +" INTEGER PRIMARY KEY AUTOINCREMENT,"+COLUMN_NAME_OF_PLACE
@@ -41,6 +35,8 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             +ADDRESS+" TEXT,"
             +LONGITUDE+" TEXT,"
             +LATITUDE+" TEXT" + ")";
+    private static final String DATABASE_NAME = "locations.db";
+    private static final int DATABASE_VERSION = 1;
 
 
     public MySQLiteHelper(Context context){
@@ -115,6 +111,28 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             res.moveToNext();
         }
         return array_list;
+    }
+
+    public Cursor SelectData() {
+        // TODO Auto-generated method stub
+
+        try {
+
+            SQLiteDatabase db;
+            db = this.getReadableDatabase(); // Read Data
+
+            Cursor cursor = db.query(TABLE_LOCATIONS, new String[]{"ID AS _id, *"}, null, null, null, null, null);
+
+            if (cursor != null) {
+                return cursor;
+            } else {
+                return null;
+            }
+
+        } catch (Exception e) {
+            return null;
+        }
+
     }
 
     //http://www.tutorialspoint.com/android/android_sqlite_database.htm

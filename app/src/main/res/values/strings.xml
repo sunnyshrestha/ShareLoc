@@ -43,8 +43,8 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="street_address">Enter street address...</string>
-    <string name = "incomplete_info">You need to fill complete information before saving</string>
-    <string name = "success">Successfully saved to database</string>
-
+    <string name="incomplete_info">You need to fill complete information before saving</string>
+    <string name="success">Successfully saved to database</string>
+    <string name="title_activity_display_database_items">displayDatabaseItems</string>
 
 </resources>

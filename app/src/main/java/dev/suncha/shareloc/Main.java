@@ -8,13 +8,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ListView;
 
 
 public class Main extends Activity {
     Button button_get,button_view;
     Intent myIntent;
-    ListView listview;
+
     private CustomCursorAdapter customAdapter;
     private MySQLiteHelper mySQLiteHelper;
 
@@ -24,7 +23,7 @@ public class Main extends Activity {
         setContentView(R.layout.activity_main);
         button_get=(Button)findViewById(R.id.button_getlocation);
         button_view=(Button)findViewById(R.id.button_viewsaved);
-        listview=(ListView)findViewById(R.id.display_data);
+
 
         button_get.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,9 +39,9 @@ public class Main extends Activity {
                 new Handler().post(new Runnable() {
                     @Override
                     public void run() {
-                        Cursor
-
-
+                        //Cursor c = mySQLiteHelper.getData();
+                        Intent displayItems = new Intent(getApplicationContext(), displayDatabaseItems.class);
+                        startActivity(displayItems);
                     }
                 });
             }
