@@ -45,6 +45,7 @@ public class CustomCursorAdapter extends CursorAdapter {
 
 //http://www.android86.com/android-advanced/android-sqlite-database-cursoradapter/ perfect
 
+
     }
 
     public int getCount(){

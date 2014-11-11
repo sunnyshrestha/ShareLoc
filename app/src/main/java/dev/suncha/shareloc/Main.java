@@ -40,8 +40,9 @@ public class Main extends Activity {
                 new Handler().post(new Runnable() {
                     @Override
                     public void run() {
-                        customAdapter = new CustomCursorAdapter(Main.this,mySQLiteHelper.getAllLocations());
-                        listview.setAdapter(customAdapter);
+                        Cursor
+
+
                     }
                 });
             }
