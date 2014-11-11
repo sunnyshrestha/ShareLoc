@@ -4,12 +4,27 @@ package dev.suncha.shareloc;
  * Created by Sunny on 10/29/2014.
  */
 public class Location {
-    private int id;
-    private String name;
-    private String description;
-    private String  address;
-    private double  longitude;
-    private double  latitude;
+    int id;
+    String name;
+    String description;
+    String address;
+    double longitude;
+    double latitude;
+
+    //Empty constructor
+    public Location() {
+    }
+
+    //Constructor
+    public Location(int id, String name, String description, String address, double longitude, double latitude) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.address = address;
+        this.longitude = longitude;
+        this.latitude = latitude;
+    }
+
 
     public int getId() {
         return id;

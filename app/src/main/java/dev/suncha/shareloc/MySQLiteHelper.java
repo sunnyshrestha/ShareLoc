@@ -57,19 +57,37 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         onCreate(sqLiteDatabase);
     }
 
-    public boolean insertLocation(String name, String description, String address, String longitude, String latitude ){
+    //CRUD Operations
+
+    //Add one location
+
+    public boolean insertLocation(Location addLocation) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
 
-        contentValues.put(COLUMN_NAME_OF_PLACE,name);
-        contentValues.put(DESCRIPTION,description);
-        contentValues.put(ADDRESS,address);
-        contentValues.put(LONGITUDE,longitude);
-        contentValues.put(LATITUDE,latitude);
+        contentValues.put(COLUMN_NAME_OF_PLACE, addLocation.getName());
+        contentValues.put(DESCRIPTION, addLocation.getDescription());
+        contentValues.put(ADDRESS, addLocation.getAddress());
+        contentValues.put(LONGITUDE, addLocation.getLongitude());
+        contentValues.put(LATITUDE, addLocation.getLatitude());
 
         sqLiteDatabase.insert(TABLE_LOCATIONS, null, contentValues);
         sqLiteDatabase.close();
         return true;
+    }
+
+    //Getting single location
+    Location getLocation(int id) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = db.query(TABLE_LOCATIONS, new String[]{COLUMN_ID,
+                        DESCRIPTION, ADDRESS, LONGITUDE, LATITUDE}, COLUMN_ID + "=?",
+                new String[]{String.valueOf(id)}, null, null, null, null);
+        if (cursor != null)
+            cursor.moveToFirst();
+        Location location = new Location(Integer.parseInt(cursor.getString(0)),
+                cursor.getString(1), cursor.getString(2));
+        return location;
     }
 
     public Cursor getData (int id){
@@ -136,4 +154,5 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
     }
 
     //http://www.tutorialspoint.com/android/android_sqlite_database.htm
+    //http://dj-android.blogspot.in/2012/10/android-show-data-from-sqlite-db-into.html
 }
