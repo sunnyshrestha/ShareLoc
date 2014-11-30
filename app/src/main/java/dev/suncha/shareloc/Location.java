@@ -12,7 +12,7 @@ public class Location {
     double latitude;
 
     //Empty constructor
-    public Location() {
+    public Location(int i, String string, String cursorString) {
     }
 
     //Constructor
